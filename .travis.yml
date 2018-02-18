@@ -10,7 +10,6 @@ addons:
       - fonts-droid
 before_script:
   - git clone https://github.com/flutter/flutter.git -b alpha --depth 1
-  - ./flutter/bin/flutter upgrade
   - ./flutter/bin/flutter doctor -v
   - sudo apt-get install dart
 script:
