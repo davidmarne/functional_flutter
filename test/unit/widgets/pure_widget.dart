@@ -31,8 +31,7 @@ class AppProps {
 
 FunctionalWidget<String> counterApp = withState(
   0,
-  (String props, int state, void setState(Mapper<int, int> mapper)) =>
-      new AppProps(
+  (String props, int state, SetState<int> setState) => new AppProps(
         title: props,
         count: state,
         increment: () => setState((s) => s + 1),
