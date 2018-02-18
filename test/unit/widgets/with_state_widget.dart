@@ -6,14 +6,12 @@ final counterKey = new Key('counterKey');
 final incrementButtonKey = new Key('incrementButtonKey');
 final decrementButtonKey = new Key('decrementButtonKey');
 
-typedef void UpdateCount();
-
 @immutable
 class AppProps {
   final String title;
   final int count;
-  final UpdateCount increment;
-  final UpdateCount decrement;
+  final VoidCallback increment;
+  final VoidCallback decrement;
   AppProps({this.title, this.count, this.increment, this.decrement});
 }
 

@@ -7,14 +7,12 @@ final incrementButtonKey = new Key('incrementButtonKey');
 final nonIncrementingButtonKey = new Key('nonIncrementingButtonKey');
 Key counterKeyPerf(int i) => new Key('counterKey-$i');
 
-typedef void UpdateCount();
-
 @immutable
 class AppProps {
   final String title;
   final int count;
-  final UpdateCount increment;
-  final UpdateCount nonIncrementingSetState;
+  final VoidCallback increment;
+  final VoidCallback nonIncrementingSetState;
   AppProps(
       {this.title, this.count, this.increment, this.nonIncrementingSetState});
 

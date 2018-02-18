@@ -4,14 +4,12 @@ import 'typedefs.dart';
 
 /// [withState] lets you compose a FunctionalWidget that is stateful
 ///
-/// typedef void UpdateCount();
-///
 /// @immutable
 ///   class AppProps {
 ///   final String title;
 ///   final int count;
-///   final UpdateCount increment;
-///   final UpdateCount decrement;
+///   final VoidCallback increment;
+///   final VoidCallback decrement;
 ///   AppProps({this.title, this.count, this.increment, this.decrement});
 /// }
 ///

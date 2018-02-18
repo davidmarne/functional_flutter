@@ -18,14 +18,13 @@ Properties should always be a value type. I suggest you leverage built_value or 
 The withState widget enhancer lets you lift state into a functional wrapper. For example:
 
 ```dart
-typedef void UpdateCount();
 
 @immutable
 class AppProps {
   final String title;
   final int count;
-  final UpdateCount increment;
-  final UpdateCount decrement;
+  final VoidCallback increment;
+  final VoidCallback decrement;
   AppProps({this.title, this.count, this.increment, this.decrement});
 }
 
