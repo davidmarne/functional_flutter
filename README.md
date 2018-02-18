@@ -18,20 +18,19 @@ Properties should always be a value type. I suggest you leverage built_value or 
 The withState widget enhancer lets you lift state into a functional wrapper. For example:
 
 ```dart
-typedef void UpdateCount();
 
 @immutable
 class AppProps {
   final String title;
   final int count;
-  final UpdateCount increment;
-  final UpdateCount decrement;
+  final VoidCallback increment;
+  final VoidCallback decrement;
   AppProps({this.title, this.count, this.increment, this.decrement});
 }
 
 FunctionalWidget<String> counterApp = withState(
   0,
-  (String props, int state, void setState(Mapper<int, int> mapper)) =>
+  (String props, int state, SetState<int> setState) =>
       new AppProps(
         title: props,
         count: state,
@@ -47,12 +46,20 @@ Widget _appContent(AppProps props) => new MaterialApp(
           children: <Widget>[
             new RaisedButton(
               onPressed: props.increment,
-              child: new Text('Increment'),
+              child: new Row(
+                children: <Widget>[
+                  new Text('Increment'),
+                ],
+              ),
               key: incrementButtonKey,
             ),
             new RaisedButton(
               onPressed: props.decrement,
-              child: new Text('Decrement'),
+              child: new Row(
+                children: <Widget>[
+                  new Text('Decrement'),
+                ],
+              ),
               key: decrementButtonKey,
             ),
             new Text(
