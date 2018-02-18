@@ -4,7 +4,7 @@ import 'package:meta/meta.dart';
 
 void main() {
   // The following app has two views, one that shows countA and one that shows
-  // countB. Depeding on which view is selected countA or countB is rendered.
+  // countB. Depending on the value of showingA, countA or countB is rendered.
   // If countA is incremented when countB is showing then the pure wrapper
   // will not rebuild the countAView widget.
   runApp(counterApp('functional flutter example'));
