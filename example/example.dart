@@ -73,18 +73,30 @@ FunctionalWidget<String> counterApp = withState(
 Widget appContent(AppProps props) => new MaterialApp(
       title: props.title,
       home: new Scaffold(
-        body: new Column(children: <Widget>[
+        body: new ListView(children: <Widget>[
           new RaisedButton(
             onPressed: props.changView,
-            child: new Text('Change View'),
+            child: new Row(
+              children: <Widget>[
+                new Text('Change View'),
+              ],
+            ),
           ),
           new RaisedButton(
             onPressed: props.incrementA,
-            child: new Text('Increment A'),
+            child: new Row(
+              children: <Widget>[
+                new Text('Increment A'),
+              ],
+            ),
           ),
           new RaisedButton(
             onPressed: props.incrementB,
-            child: new Text('Increment B'),
+            child: new Row(
+              children: <Widget>[
+                new Text('Increment B'),
+              ],
+            ),
           ),
           viewBranch(props),
         ]),

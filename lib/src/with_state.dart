@@ -30,12 +30,20 @@ import 'typedefs.dart';
 ///         children: <Widget>[
 ///           new RaisedButton(
 ///             onPressed: props.increment,
-///             child: new Text('Increment'),
+///             child: new Row(
+///                children: <Widget>[
+///                  new Text('Increment'),
+///                ],
+///              ),
 ///             key: incrementButtonKey,
 ///           ),
 ///           new RaisedButton(
 ///             onPressed: props.decrement,
-///             child: new Text('Decrement'),
+///             child: new Row(
+///                children: <Widget>[
+///                  new Text('Decrement'),
+///                ],
+///              ),
 ///             key: decrementButtonKey,
 ///           ),
 ///           new Text(

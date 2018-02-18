@@ -46,12 +46,20 @@ Widget _appContent(AppProps props) => new MaterialApp(
           children: <Widget>[
             new RaisedButton(
               onPressed: props.increment,
-              child: new Text('Increment'),
+              child: new Row(
+                children: <Widget>[
+                  new Text('Increment'),
+                ],
+              ),
               key: incrementButtonKey,
             ),
             new RaisedButton(
               onPressed: props.nonIncrementingSetState,
-              child: new Text('Non-Incrementing Set State'),
+              child: new Row(
+                children: <Widget>[
+                  new Text('Non-Incrementing Set State'),
+                ],
+              ),
               key: nonIncrementingButtonKey,
             ),
             pure(textContent)(props.count),

@@ -65,12 +65,20 @@ Widget _counterAppContent(AppProps props) => new Scaffold(
         children: <Widget>[
           new RaisedButton(
             onPressed: () => props.actions.increment(),
-            child: new Text('Increment'),
+            child: new Row(
+              children: <Widget>[
+                new Text('Increment'),
+              ],
+            ),
             key: incrementButtonKey,
           ),
           new RaisedButton(
             onPressed: () => props.actions.decrement(),
-            child: new Text('Decrement'),
+            child: new Row(
+              children: <Widget>[
+                new Text('Decrement'),
+              ],
+            ),
             key: decrementButtonKey,
           ),
           new Text(
