@@ -20,3 +20,6 @@ dev_dependencies:
   flutter_driver:
     sdk: flutter
   source_gen: ^0.7.0
+
+environment:
+  sdk: ">=1.19.0 <3.0.0"
