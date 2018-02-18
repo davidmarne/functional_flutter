@@ -3,7 +3,7 @@
 
 # functional_flutter
 
-Tools for composing flutter widget trees in a functional manner.
+Tools for composing flutter widget trees in a functional manner. Inspired by [recompose](https://github.com/acdlite/recompose).
 
 # Why
 
