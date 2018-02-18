@@ -11,6 +11,7 @@ addons:
 before_script:
   - git clone https://github.com/flutter/flutter.git -b alpha --depth 1
   - ./flutter/bin/flutter doctor -v
+  - sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_unstable.list > /etc/apt/sources.list.d/dart_unstable.list'
   - sudo apt-get install dart
 script:
   - ./flutter/bin/flutter test --coverage --coverage-path=lcov.info
