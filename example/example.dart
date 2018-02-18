@@ -6,7 +6,7 @@ void main() {
   // The following app has two views, one that shows countA and one that shows
   // countB. Depending on the value of showingA, countA or countB is rendered.
   // If countA is incremented when countB is showing then the pure wrapper
-  // will not rebuild the countAView widget.
+  // will not rebuild the counterView widget.
   runApp(counterApp('functional flutter example'));
 }
 
