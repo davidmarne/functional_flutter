@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../widgets/pure_widget.dart';
 
 void main() {
-  group('withState: ', () {
+  group('pure: ', () {
     setUp(() {
       resetBuildCount();
       expect(buildCount, 0);
