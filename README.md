@@ -11,6 +11,8 @@ Your widget tree should be a function of your applications state, so why would y
 
 functional_flutter encourages you to separate your state and properties from your widget definition. Rather than have a class that has properties and a build function implemented, you can lift the properties into a class and write `FunctionalWidgets` that take a properties class and return a widget.
 
+Following this pattern helps make your application easier to reason about and it decreases the amount of widgets in the tree.
+
 Properties should always be a value type. I suggest you leverage built_value or meta's @immutable annotation for your prop classes.
 
 # If everything is a pure functional widget how can my widgets have state
